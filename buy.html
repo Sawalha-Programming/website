@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>buy page</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+  <meta name="description"
+    content="Sawalha's Dealership offers a diverse range of premium cars to meet your driving needs.">
+  <meta name="keywords" content="Car Dealership, Premium Cars, Mercedes-Benz, BMW, Audi">
+  <meta name="author" content="Ahmad Sawalha">
+  
+  <style>
+    
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    .car-images {
+      flex: 1;
+      max-width: 50%;
+      overflow-y: scroll;
+    }
+    .car-images img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .options {
+      flex: 1;
+      max-width: 45%;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .option-group {
+      margin-bottom: 20px;
+    }
+    .option-group h2 {
+      margin-bottom: 10px;
+    }
+    .option {
+      display: flex;
+      align-items: center;
+    }
+    .option-label {
+      flex: 2;
+    }
+    .option-input {
+      flex: 1;
+    }
+    .buy-button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .buy-button:hover {
+      background-color: orange;
+    }
+
+    @media (max-width: 780px) {
+    .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    }
+    
+    .nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    }
+    
+    .nav li {
+    margin-right: 0;
+    }
+    
+    .nav {
+    margin-top: 20px;
+    }
+    
+    .logo img {
+    width: 80px;
+    
+    }
+    }
+  </style>
+  <script>
+    function updateExteriorImage() {
+      const exteriorImage = document.getElementById('exterior-image');
+      const exteriorColor = document.querySelector('input[name="exterior-color"]:checked').value;
+      exteriorImage.src = `img/${exteriorColor}-maybach.jpg`;
+    }
+
+    function updateInteriorImage() {
+      const interiorImage = document.getElementById('interior-image');
+      const interiorColor = document.querySelector('input[name="interior-color"]:checked').value;
+      interiorImage.src = `img/${interiorColor}-interior.jpg`;
+    }
+
+    function updateWheelImage() {
+      const wheelImage = document.getElementById('wheel-image');
+      const wheelSize = document.querySelector('input[name="wheel-size"]:checked').value;
+      wheelImage.src = `img/${wheelSize}.jpg`;
+    }
+
+    function setSpecSheet() {
+  const exteriorColor = document.querySelector('input[name="exterior-color"]:checked').value;
+  const interiorColor = document.querySelector('input[name="interior-color"]:checked').value;
+  const wheelSize = document.querySelector('input[name="wheel-size"]:checked').value;
+
+  document.getElementById('exterior-color').value = exteriorColor;
+  document.getElementById('interior-color').value = interiorColor;
+  document.getElementById('wheel-size').value = wheelSize;
+
+  document.querySelector('.options').style.display = 'none';
+
+  document.getElementById('thank-you-message').style.display = 'block';
+}
+  </script>
+</head>
+<body>
+  <div class="fixed-header">
+    <header class="header">
+      <div class="logo">
+        <img src="img/car-logo.jpg" alt="Sawalha's Dealership">
+        <h1>Sawalha's Dealership</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mercedes.html">Mercedes-Benz</a></li>
+          <li><a href="bmw.html">BMW</a></li>
+          <li><a href="audi.html">Audi</a></li>
+          <li>
+            <?php
+            if (isset($_SESSION['privilleged'])) {
+              $username = $_SESSION['privilleged'];
+              echo '<span class="username">' . $username . '</span>';
+            }
+            ?>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  
+  <div class="container">
+    <div class="car-images">
+      
+      <img id="exterior-image" src="img/exterior_color.jpg" alt="Exterior Color">
+     
+      <img id="interior-image" src="img/interior_color.jpg" alt="Interior Color">
+      
+      <img id="wheel-image" src="img/wheel_size.jpg" alt="Wheel Size">
+    </div>
+
+    <div class="options">
+      <h2>Select Options</h2>
+  
+      
+      <div class="option-group">
+        <h2>Exterior Color</h2>
+        <label class="option">
+          <span class="option-label">Brown</span>
+          <input type="radio" name="exterior-color" value="brown" onchange="updateExteriorImage()">
+        </label>
+        <label class="option">
+          <span class="option-label">Blue</span>
+          <input type="radio" name="exterior-color" value="blue" onchange="updateExteriorImage()">
+        </label>
+        <label class="option">
+          <span class="option-label">Black</span>
+          <input type="radio" name="exterior-color" value="black" onchange="updateExteriorImage()">
+        </label>
+        
+      </div>
+  
+      
+      <div class="option-group">
+        <h2>Interior Color</h2>
+        <label class="option">
+          <span class="option-label">Beige</span>
+          <input type="radio" name="interior-color" value="beige" onchange="updateInteriorImage()">
+        </label>
+        <label class="option">
+          <span class="option-label">Brown</span>
+          <input type="radio" name="interior-color" value="brown" onchange="updateInteriorImage()">
+        </label>
+        <label class="option">
+          <span class="option-label">Black</span>
+          <input type="radio" name="interior-color" value="black" onchange="updateInteriorImage()">
+        </label>
+        
+      </div>
+  
+      
+      <div class="option-group">
+        <h2>Wheel Size</h2>
+        <label class="option">
+          <span class="option-label">18-inch</span>
+          <input type="radio" name="wheel-size" value="18inch" onchange="updateWheelImage()">
+        </label>
+        <label class="option">
+          <span class="option-label">20-inch</span>
+          <input type="radio" name="wheel-size" value="20inch" onchange="updateWheelImage()">
+        </label>
+        <label class="option">
+          <span class="option-label">21-inch</span>
+          <input type="radio" name="wheel-size" value="21inch" onchange="updateWheelImage()">
+        </label>
+        
+      </div>
+  
+      
+      <form method="POST" action="spec-sheet.php" onsubmit="setSpecSheet(); return false;">
+        
+        <input type="hidden" id="exterior-color" name="exterior-color" value="">
+        <input type="hidden" id="interior-color" name="interior-color" value="">
+        <input type="hidden" id="wheel-size" name="wheel-size" value="">
+        <button type="submit" class="buy-button">Buy Now</button>
+      </form>
+      
+     
+      <div id="thank-you-message" style="display: none;">
+        Thank you for your purchase!
+      </div>
+  </body>
+</html>

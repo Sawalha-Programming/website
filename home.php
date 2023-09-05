@@ -1,0 +1,124 @@
+<?php
+session_start();
+if(!isset($_SESSION['privilleged'])){
+   header("location:login.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    .logo-link {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo-bg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .paragraph {
+      text-align: left;
+      margin: 40px auto;
+      color: #888;
+      font-size: 14px;
+      max-width: 500px;
+    }
+  </style>
+  <title>Car Dealership</title>
+</head>
+
+<body>
+
+<div> <p>  logged in succesfully 
+    <?php //echo $_SESSION['privilleged'] ?> <p> </div> 
+
+  <div class="fixed-header">
+    <header class="header">
+      <div class="logo">
+        <img src="img/car-logo.jpg" alt="Sawalha's Dealership">
+        <h1>Sawalha's Dealership</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mercedes.html">Mercedes-Benz</a></li>
+          <li><a href="bmw.html">BMW</a></li>
+          <li><a href="audi.html">Audi</a></li>
+          <li><a href="http://localhost/login.php">Login</a></li>
+          <li><a href="http://localhost/register.php">Sign Up</a></li>
+          <li><a href="logout.php"> Log out here </a> </li>
+
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div class="brand-list">
+    <a href="mercedes.html" class="logo-link">
+      <div class="logo-bg" style="background-image: url('img/maybach.jpg');"></div>
+      <img src="img/mercedes.svg" alt="Mercedes-Benz" class="logo-img">
+    </a>
+    <a href="bmw.html" class="logo-link">
+      <div class="logo-bg" style="background-image: url('img/i7.jpg');"></div>
+      <img src="img/BMW.svg.png" alt="BMW" class="logo-img">
+    </a>
+    <a href="audi.html" class="logo-link">
+      <div class="logo-bg" style="background-image: url('img/a8.jpg');"></div>
+      <img src="img/Audi.png" alt="Audi" class="logo-img">
+    </a>
+  </div>
+
+  <p class="paragraph">
+    Sawalha's Dealership offers a diverse range of premium cars to meet your driving needs. Whether you're in search of
+    elegance, power, or cutting-edge technology, our collection showcases top-notch vehicles from renowned brands.
+    Indulge in the fusion of luxury and performance as you explore our hand-picked selection of vehicles that embody
+    craftsmanship and innovation. Visit our showroom to experience automotive excellence like never before.
+  </p>
+
+  <div class="contact-section">
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.2998759512747!2d35.93749641511797!3d31.95292508741959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151caebc4c06e9a5%3A0x4f6b66a58be5c5b2!2sAmman%2C%20Jordan!5e0!3m2!1sen!2sus!4v1679208937001!5m2!1sen!2sus"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <!-- Add the "Stop Sending Me Email" button here -->
+    <a href="http://localhost/email-delete.php" class="stop-email-button">Stop Sending Me emails</a>
+    <!-- End of the button -->
+    </div>
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> info@sawalhadealership.com</p>
+      <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+      <p><strong>Address:</strong> Amman,Jordan</p>
+    </div>
+  </div>
+</body>
+
+</html>

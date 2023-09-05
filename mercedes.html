@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercedes-Benz</title>
+  <link rel="stylesheet" href="styles.css">
+
+      <meta name="description"
+        content="Sawalha's Dealership offers a diverse range of premium cars to meet your driving needs.">
+      <meta name="keywords" content="Car Dealership, Premium Cars, Mercedes-Benz, BMW, Audi">
+      <meta name="author" content="Ahmad Sawalha">
+
+  <style>
+    .mercedes-logo {
+      text-align: center;
+    }
+    .mercedes-logo img {
+      max-width: 200px;
+      height: auto;
+    }
+    .intro-paragraph {
+      margin-bottom: 40px; 
+    }
+
+    .buy-button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buy-button:hover, .buy-button:active {
+      background-color: orange;
+    }
+
+    @media (max-width: 780px) {
+    .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    }
+    
+    .nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    }
+    
+    .nav li {
+    margin-right: 0;
+    }
+    
+    .nav {
+    margin-top: 20px;
+    }
+    
+    .logo img {
+    width: 80px;
+    
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed-header">
+    <header class="header">
+      <div class="logo">
+        <img src="img/car-logo.jpg" alt="Sawalha's Dealership">
+        <h1>Sawalha's Dealership</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mercedes.html">Mercedes-Benz</a></li>
+          <li><a href="bmw.html">BMW</a></li>
+          <li><a href="audi.html">Audi</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <div class="page-content">
+    <div class="mercedes-logo">
+      <img src="img/mercedes.svg" alt="Mercedes-Benz Logo">
+    </div>
+    <h2 style="text-align: center;">Mercedes-Benz</h2>
+    <p class="intro-paragraph">Experience the epitome of luxury and performance with our exquisite Mercedes-Benz collection. Crafted with precision engineering and elegance, these vehicles redefine driving excellence.</p>
+
+    <div class="vehicle-listing">
+      <div class="vehicle-content">
+        <div class="vehicle-images">
+          <img src="img/maybach2.jpg" alt="Mercedes-Maybach S580">
+          <img src="img/maybach4.jpg" alt="Mercedes-Maybach S580">
+          <img src="img/maybach3.jpg" alt="Mercedes-Maybach S580">
+          <img src="img/maybach.jpg" alt="Mercedes-Maybach S580">
+        </div>
+        <div class="vehicle-specs">
+          <h3>Mercedes-Maybach S580</h3>
+          <p><strong>Top of the line sedan with luxury and comfort in mind</strong></p>
+          <p><strong>Price:</strong> $190,000</p>
+          <p><strong>Specs:</strong> 4.0L V8 Biturbo Engine, 496 HP, sedan</p>
+          
+          <!-- Use an anchor tag to link to the customization page -->
+          <a class="buy-button" href="buy.html">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="vehicle-listing">
+      <div class="vehicle-content">
+        <div class="vehicle-images">
+          <img src="img/gls.jpg" alt="Mercedes-Maybach S580">
+          <img src="img/gls2.jpg" alt="Mercedes-Maybach S580">
+          <img src="img/gls3.jpg" alt="Mercedes-Maybach S580">
+        </div>
+        <div class="vehicle-specs">
+          <h3>Mercedes GLS</h3>
+          <p><strong>Greatest Mercedes SUV</strong></p>
+          <p><strong>Price:</strong> $140,000</p>
+          <p><strong>Specs:</strong> 4.0L V8 Biturbo Engine, 496 HP, SUV</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="vehicle-listing">
+      <h3>Mercedes-AMG GT63</h3>
+      <p><strong>MSRP:</strong> $150,000</p>
+      <p><strong>Specs:</strong> 4.0L V8 Biturbo Engine, 630 HP, 0-60 mph in 3.2 seconds</p>
+      <div class="vehicle-images">
+        <img src="img/gt63.jpg" alt="Mercedes-AMG GT63">
+        <img src="img/gt632.jpg" alt="Mercedes-AMG GT63">
+        <img src="img/gt633.jpg" alt="Mercedes-AMG GT63">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Email:</strong> info@sawalhadealership.com</p>
+      <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+      <p><strong>Address:</strong> Amman, Jordan</p>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.2998759512747!2d35.93749641511797!3d31.95292508741959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151caebc4c06e9a5%3A0x4f6b66a58be5c5b2!2sAmman%2C%20Jordan!5e0!3m2!1sen!2sus!4v1679208937001!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  
+</body>
+</html>

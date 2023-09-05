@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 20px; 
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.vehicle-images {
+  display: flex;
+  width: 100%;
+  overflow: auto;
+}
+.vehicle-images img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.vehicle-listing {
+  margin-bottom: 40px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.intro-paragraph {
+  margin-bottom: 40px; /* Added margin below the paragraph */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffc107;
+}
+
+.brand-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  margin-top: 180px
+}
+
+.logo-link {
+  display: block;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s, scale 0.3s;
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.logo-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  /*filter: blur(1px);*/
+  opacity: 0.3;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.logo-img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.logo-link:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  max-width: 800px;
+}
+.map-container {
+  width: 60%;
+}
+.contact-info {
+  width: 38%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+  color: #ffc107; /* Change the color to match your design */
+  margin-left: 10px; /* Add spacing between the username and other navigation items */
+}
